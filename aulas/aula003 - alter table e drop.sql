@@ -16,3 +16,29 @@ alter table pessoas change profissao prof varchar(20);/*Consegue mudar o nome do
 
 alter table pessoas rename to gafanhotos; /*Altera o nome da tabela*/
 desc gafanhotos;
+
+create table if not exists cursos(
+	nome varchar(30) not null unique,
+    descricao text,
+    carga int unsigned,
+    totaulas int,
+    ano year default '2024'
+) default charset = utf8mb4;
+
+alter table cursos add codigo int first;
+
+alter table cursos change codigo idcurso int;
+
+alter table cursos add primary key(idcurso);
+
+desc cursos;
+
+create table teste(
+	id int,
+    nome varchar(20),
+    idade int
+);
+
+desc teste;
+
+drop table teste;
