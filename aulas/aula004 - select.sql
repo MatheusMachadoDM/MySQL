@@ -30,7 +30,7 @@ select * from cursos where nome like 'e%o';
 
 select * from cursos where nome like '%a_';
 
-select distinct carga from cursos order by carga; -- Funções de agregação | count | max | sum | avg
+select distinct carga from cursos order by carga; -- Funções de agregação | distinct | count | max | sum | avg
 
 select count(*) from cursos; -- conta os registros
 
@@ -43,3 +43,6 @@ select min(carga) from cursos; -- Pega o menor numero
 select sum(totaulas) from cursos; -- Soma os registros
 
 select avg(carga) from cursos; -- Media do registro
+
+
+
